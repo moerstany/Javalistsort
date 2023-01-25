@@ -6,6 +6,8 @@ import java.lang.reflect.Type;
 import java.util.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -52,6 +54,7 @@ public class Main {
 
             }
         }
-     System.out.print(wArray);
+        List<Integer> list4 = Arrays.stream(wArray).boxed().collect(Collectors.toList());
+     System.out.print(list4);
     }
 }
